@@ -29,85 +29,70 @@ export function DrawerContent(props) {
                 <View style={styles.drawerContent}>
                     <View style={styles.userInfoSection}>
                         <View style={{flexDirection:'row',marginTop: 15}}>
-                            <Avatar.Image 
-                                source={{
-                                    uri: 'https://api.adorable.io/avatars/50/abott@adorable.png'
-                                }}
-                                size={50}
-                            />
+                            <Icon name="user" size={50} color="#8a8a8a"></Icon>
                             <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>John Doe</Title>
-                                <Caption style={styles.caption}>@j_doe</Caption>
+                                <Title style={styles.title}>Harsh Vaswani</Title>
+                                <Caption style={styles.caption}>@harshva89</Caption>
                             </View>
                         </View>
 
-                        <View style={styles.row}>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>80</Paragraph>
-                                <Caption style={styles.caption}>Following</Caption>
-                            </View>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>100</Paragraph>
-                                <Caption style={styles.caption}>Followers</Caption>
-                            </View>
-                        </View>
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="home-outline" 
+                                name="home" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Home"
+                            label=" Menu"
                             onPress={() => {props.navigation.navigate('Home')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="account-outline" 
+                                name="credit-card" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Profile"
-                            onPress={() => {props.navigation.navigate('Profile')}}
+                            label="History"
+                            onPress={() => {props.navigation.navigate('OrderHistory')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="bookmark-outline" 
+                                name="info" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Bookmarks"
-                            onPress={() => {props.navigation.navigate('BookmarkScreen')}}
+                            label="     About"
+                            onPress={() => {props.navigation.navigate('About')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="settings-outline" 
+                                name="sitemap" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Settings"
-                            onPress={() => {props.navigation.navigate('SettingsScreen')}}
+                            label=" Locate Us"
+                            onPress={() => {props.navigation.navigate('Locateus')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="account-check-outline" 
+                                name="volume-control-phone" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Support"
-                            onPress={() => {props.navigation.navigate('SupportScreen')}}
+                            label="  Contact us"
+                            onPress={() => {props.navigation.navigate('Contactus')}}
                         />
                     </Drawer.Section>
                     <Drawer.Section title="Preferences">
@@ -126,7 +111,7 @@ export function DrawerContent(props) {
                 <DrawerItem 
                     icon={({color, size}) => (
                         <Icon 
-                        name="exit-to-app" 
+                        name="undo" 
                         color={color}
                         size={size}
                         />

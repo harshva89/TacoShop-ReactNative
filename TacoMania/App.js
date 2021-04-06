@@ -26,18 +26,14 @@ import Logo from './pages/logo';
 import Login from './pages/login';
 import RootStack from './pages/rootstack';
 import { DrawerContent } from './pages/DrawerContent'
+import HomeScreen from './pages/afterlogin/menu'
+import AboutScreen from './pages/afterlogin/about'
+import HistoryScreen from './pages/afterlogin/history'
+import ContactScreen from './pages/afterlogin/contact'
+import LocateScreen from './pages/afterlogin/locate'
 
 const Stack = createStackNavigator();
 
-const HomeScreen = ({navigation}) => {
-  const { signOut } = React.useContext(AuthContext);
-  return(
-    <View style={{flex:1, alignItems: 'center', justifyContent:'center'}}>
-      <Text>Home Screen</Text>
-      <Button title="Logout" onPress={() => signOut()}></Button>
-    </View>
-  )
-}
 
 const DetailsScreen = () => {
   return(
@@ -226,7 +222,10 @@ const [isDarkTheme, setIsDarkTheme] = React.useState(false);
           {loginState.userToken != null ? (
             <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
               <Drawer.Screen name="Home" component={HomeScreen} />
-              <Drawer.Screen name="Details" component={DetailsScreen} />
+              <Drawer.Screen name="OrderHistory" component={HistoryScreen} />
+              <Drawer.Screen name="About" component={AboutScreen} />
+              <Drawer.Screen name="Locateus" component={LocateScreen} />
+              <Drawer.Screen name="Contactus" component={ContactScreen} />
             </Drawer.Navigator>
           ) : <RootStack></RootStack>}
 
