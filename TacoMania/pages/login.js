@@ -188,7 +188,7 @@ const Login = ({navigation}) => {
                             <Text style={styles.buttonText}>Log in</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
-                        style={styles.registerButton}
+                        style={[styles.registerButton, {backgroundColor:colors.background}]}
                         onPress={()=>{navigation.navigate("SignUpScreen")}}>
                             <Text style={[styles.buttonText, {color: colors.text}]}>Register</Text>
                         </TouchableOpacity>

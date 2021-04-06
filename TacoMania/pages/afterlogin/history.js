@@ -16,12 +16,33 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+import { useTheme } from '@react-navigation/native';
+
+const styles = StyleSheet.create({
+    heading:{
+      paddingTop:10,
+      paddingHorizontal:10,
+      fontSize:40,
+      fontWeight: 'bold',
+    },
+    info:{
+      paddingTop:250,
+      color:'#4f4f4f',
+      alignSelf:'center',
+      paddingHorizontal:20,
+      fontSize:20,
+      fontWeight: 'bold',
+    }
+})
 
 const HistoryStack = createStackNavigator();
 const HistoryScreen1 = () => {
+  
+    const { colors } = useTheme();
   return(
-    <View style={{flex:1, alignItems: 'center', justifyContent:'center'}}>
-      <Text>History Screen</Text>
+    <View >
+      <Text style={[styles.heading, {color:colors.text}]}>Order History:</Text>
+      <Text style={[styles.info, {color:colors.text}]}>No orders yet!</Text>
     </View>
   )
 }
