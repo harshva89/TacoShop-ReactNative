@@ -140,9 +140,11 @@ const Login = ({navigation}) => {
     //       <Button title="Log in" onPress={()=>{}}></Button>
     //   </View>
       <View style={styles.container}>
-          <StatusBar backgroundColor="#009387" barStyle="light-content"></StatusBar>
+          <StatusBar backgroundColor="#ff890a" barStyle="light-content"></StatusBar>
             <View style={styles.header}>
-                <Text style={styles.text_header}>Sign In</Text>
+                <Animatable.Text animation="fadeInDownBig">
+                    <Text style={styles.text_header}>Sign in</Text>
+                </Animatable.Text>
             </View>
             <Animatable.View animation="fadeInUpBig">
                 <View style={[styles.footer, {
@@ -150,13 +152,13 @@ const Login = ({navigation}) => {
                 }]}>
                     <Text style={[styles.text_footer, {color: colors.text}]}>User Name:</Text>
                     <View style={styles.action}>
-                    <Icon name="rocket" size={20} color={colors.text}></Icon>
+                    <Icon name="user" size={20} color={colors.text}></Icon>
                     <TextInput placeholderTextColor={colors.text} 
                     onEndEditing={(e)=>{handleValidUser(e)}}
                     onChangeText={(val)=>textInputChange(val)}
                     style={[styles.textInput, {color: colors.text}]} placeholder="Username" autoCapitalize="none"></TextInput>
                     {data.check_textInputChange ? 
-                    <Animatable.View animation="bounceIn"><Icon name="rocket" size={20} color={colors.text}></Icon></Animatable.View> : null}
+                    <Animatable.View animation="bounceIn"><Icon name="check" size={20} color={colors.text}></Icon></Animatable.View> : null}
                     
                     </View>
                     {data.isValidUser ? null : <Animatable.View animation="fadeInLeft">
@@ -165,14 +167,14 @@ const Login = ({navigation}) => {
                     <View style={{marginTop: 20}}></View>
                     <Text style={[styles.text_footer], {color: colors.text}}>Password</Text>
                     <View style={styles.action}>
-                    <Icon name="rocket" size={20} color={colors.text}></Icon>
+                    <Icon name="eject" size={20} color={colors.text}></Icon>
                     <TextInput placeholderTextColor={colors.text} 
                     placeholder="Password"
                     onEndEditing={(e)=>handleValidPassword(e)}
                     onChangeText={(val)=>handlePasswordChange(val)} style={[styles.textInput, {color: colors.text}]} 
                     secureTextEntry={data.secureTextEntry ? true : false} autoCapitalize="none"></TextInput>
                     <TouchableOpacity onPress={updateSecureText}>
-                        {data.secureTextEntry ? <Icon name="rocket" size={20} color={colors.text}></Icon>  : <Icon name="rocket" size={20} color={colors.text}></Icon> }
+                        {data.secureTextEntry ? <Icon name="eye" size={20} color={colors.text}></Icon>  : <Icon name="eye-slash" size={20} color={colors.text}></Icon> }
                         
                     </TouchableOpacity>
                     </View>
@@ -188,7 +190,7 @@ const Login = ({navigation}) => {
                         <TouchableOpacity
                         style={styles.registerButton}
                         onPress={()=>{navigation.navigate("SignUpScreen")}}>
-                            <Text style={styles.buttonText}>Register</Text>
+                            <Text style={[styles.buttonText, {color: colors.text}]}>Register</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -203,19 +205,19 @@ const height_logo = height * 0.28;
 
 const styles = StyleSheet.create({
     signInButton:{
-        backgroundColor:"#276328",
+        backgroundColor:"#ff890a",
         padding:10,
         margin:8,
-        borderBottomColor:"#276348",
-        borderWidth:4,
+        borderBottomColor:"#000",
+        borderBottomWidth:2,
         alignItems: 'center',
         borderRadius:10
     },
     registerButton:{
-        backgroundColor:"#725362",
+        backgroundColor:"#FFF",
         padding:10,
         margin:8,
-        borderBottomColor:"#725362",
+        borderColor:"#ff890a",
         borderWidth:4,
         alignItems: 'center',
         borderRadius:10
@@ -228,7 +230,7 @@ const styles = StyleSheet.create({
     
     container: {
       flex: 1, 
-      backgroundColor: '#009387'
+      backgroundColor: '#ff890a'
     },
     header: {
         flex: 1,
@@ -238,15 +240,15 @@ const styles = StyleSheet.create({
     },
     footer: {
         backgroundColor: '#fff',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
+      borderTopLeftRadius: 5,
+      borderTopRightRadius: 50,
         paddingHorizontal: 20,
         paddingVertical: 30
     },
     text_header: {
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 30
+        fontSize: 40
     },
     text_footer: {
         color: '#05375a',

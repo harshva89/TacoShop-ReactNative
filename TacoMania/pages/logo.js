@@ -33,17 +33,20 @@ const Logo = ({navigation}) => {
     const { colors } = useTheme();
   return (
       <View style={styles.container}>
-          <StatusBar backgroundColor="#009387" barStyle="light-content"></StatusBar>
-            <View style={styles.header}>
-                <Text style={styles.title}>Taco-Mania</Text>
-            </View>
+          <StatusBar backgroundColor="#ff890a" barStyle="light-content"></StatusBar>
+            
+                <View style={styles.header}>
+                    <Animatable.Text animation="fadeInDownBig">
+                    <Text style={styles.title}>Taco-Mania</Text>
+                </Animatable.Text>
+                </View>
             <Animatable.View animation="fadeInUpBig">
                 <View style={[styles.footer, {
                     backgroundColor: colors.background,
                 }]}>
                     <Text style={[styles.text, {
                         color: colors.text
-                    }]}>We welcome you to taco mania, enjoy the best of tacos.</Text>
+                    }]}>We welcome you to taco mania, home of the best tacos.</Text>
                     <Animatable.View animation="bounceIn">
                         <View style={styles.button}>
                             <TouchableOpacity style={styles.button2} onPress={()=>{
@@ -67,17 +70,18 @@ const height_logo = height * 0.28;
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    backgroundColor: '#009387',
+    backgroundColor: '#ff890a',
   },
   header: {
       flex: 3,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'flex-start',
+      paddingLeft:20
   },
   footer: {
       backgroundColor: '#fff',
-      borderTopLeftRadius: 10,
-      borderTopRightRadius: 40,
+      borderTopLeftRadius: 5,
+      borderTopRightRadius: 50,
       paddingVertical: 50,
       paddingHorizontal: 30
   },
@@ -87,7 +91,7 @@ const styles = StyleSheet.create({
   },
   title: {
       color: '#ffffff',
-      fontSize: 30,
+      fontSize: 50,
       fontWeight: 'bold',
       fontFamily: 'sans-serif-medium'
   },
@@ -110,7 +114,7 @@ const styles = StyleSheet.create({
       
   },
   button2: {
-      backgroundColor:"#009387",
+      backgroundColor:"#ff890a",
       padding:10,
       width:200,
       borderRadius: 20,
