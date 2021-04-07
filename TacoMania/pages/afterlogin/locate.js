@@ -24,7 +24,9 @@ import { useTheme } from '@react-navigation/native';
 const styles = StyleSheet.create({
     container:{
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      paddingHorizontal:20,
+      paddingTop:20
     },
     displayTabs:{
       padding:20,
@@ -80,7 +82,9 @@ const LocateScreen1 = () => {
     const { colors } = useTheme();
   return(
     <View style={styles.container}>
+      <Animatable.Text animation="fadeInDown">
       <Text style={[styles.heading, {color:colors.text}]}>Locate us:</Text>
+      </Animatable.Text>
       <Animatable.View animation="fadeInDown">
         <View>
           <TouchableOpacity style={styles.button}>

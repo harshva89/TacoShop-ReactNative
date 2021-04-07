@@ -95,7 +95,8 @@ const [isDarkTheme, setIsDarkTheme] = React.useState(false);
       ...NavigationDefaultTheme.colors,
       ...PaperDefaultTheme.colors,
       background: '#ffffff',
-      text: '#333333'
+      text: '#333333',
+      displayTabs: '#ffebeb'
     }
   }
   
@@ -107,6 +108,7 @@ const [isDarkTheme, setIsDarkTheme] = React.useState(false);
       ...PaperDarkTheme.colors,
       background: '#333333',
       text: '#ffffff',
+      displayTabs: '#423f3f'
     }
   }
 

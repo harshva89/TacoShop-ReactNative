@@ -23,7 +23,9 @@ import { useTheme } from '@react-navigation/native';
 const styles = StyleSheet.create({
     container:{
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      paddingHorizontal:20,
+      paddingTop:20
     },
     displayTabs:{
       padding:20,
@@ -79,7 +81,9 @@ const ContactScreen1 = () => {
     const { colors } = useTheme();
   return(
     <View style={styles.container}>
+      <Animatable.Text animation="fadeInDown">
       <Text style={[styles.heading, {marginBottom: 20, color: colors.text}]}>Contact Details:</Text>
+      </Animatable.Text>
       <Animatable.View animation="fadeInDown">
         <View style={[styles.displayTabs, {backgroundColor:colors.background}]}>
         <Icon name="phone" color={colors.text} size={25}></Icon>

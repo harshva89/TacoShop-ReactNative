@@ -32,9 +32,10 @@ const styles = StyleSheet.create({
       flexDirection: 'column'
     },
     displayTabs:{
+      borderRadius:7,
       padding:20,
       margin:5,
-      backgroundColor: '#f7f7f7',
+      backgroundColor: '#b8b8b8',
       display: 'flex',
       flexDirection: 'row'
     },
@@ -65,7 +66,7 @@ const HomeScreenBasic = ({navigation}) => {
     <ScrollView>
       <View style={[styles.container, {padding:10}]}>
       <Animatable.View animation="bounceIn">
-        <View style={[styles.displayTabs, {backgroundColor:colors.background}]}>
+        <View style={[styles.displayTabs, {backgroundColor:colors.displayTabs}]}>
         <Image
         style={styles.tinyLogo}
         source={require('../tacoimg.jpg')}
@@ -77,7 +78,7 @@ const HomeScreenBasic = ({navigation}) => {
       </View>
       </Animatable.View>
       <Animatable.View animation="bounceIn">
-        <View style={[styles.displayTabs, {backgroundColor:colors.background}]}>
+        <View style={[styles.displayTabs, {backgroundColor:colors.displayTabs}]}>
         <Image
         style={styles.tinyLogo}
         source={require('../tacoimg2.jpg')}
@@ -90,7 +91,7 @@ const HomeScreenBasic = ({navigation}) => {
       </Animatable.View>
       
       <Animatable.View animation="bounceIn">
-        <View style={[styles.displayTabs, {backgroundColor:colors.background}]}>
+        <View style={[styles.displayTabs, {backgroundColor:colors.displayTabs}]}>
         <Image
         style={styles.tinyLogo}
         source={require('../tacoimg3.jpg')}
@@ -104,7 +105,7 @@ const HomeScreenBasic = ({navigation}) => {
       
       
       <Animatable.View animation="bounceIn">
-        <View style={[styles.displayTabs, {backgroundColor:colors.background}]}>
+        <View style={[styles.displayTabs, {backgroundColor:colors.displayTabs}]}>
         <Image
         style={styles.tinyLogo}
         source={require('../tacoimg.jpg')}
@@ -117,7 +118,7 @@ const HomeScreenBasic = ({navigation}) => {
       </Animatable.View>
       
       <Animatable.View animation="bounceIn">
-        <View style={[styles.displayTabs, {backgroundColor:colors.background}]}>
+        <View style={[styles.displayTabs, {backgroundColor:colors.displayTabs}]}>
         <Image
         style={styles.tinyLogo}
         source={require('../tacoimg2.jpg')}
@@ -141,7 +142,7 @@ const DetailsScreen = () => {
     <ScrollView>
       <View style={[styles.container, {padding:10}]}>
       <Animatable.View animation="bounceIn">
-        <View style={[styles.displayTabs, {backgroundColor:colors.background}]}>
+        <View style={[styles.displayTabs, {backgroundColor:colors.displayTabs}]}>
         <Image
         style={styles.tinyLogo}
         source={require('../tacoimg4.png')}
@@ -153,7 +154,7 @@ const DetailsScreen = () => {
       </View>
       </Animatable.View>
       <Animatable.View animation="bounceIn">
-        <View style={[styles.displayTabs, {backgroundColor:colors.background}]}>
+        <View style={[styles.displayTabs, {backgroundColor:colors.displayTabs}]}>
         <Image
         style={styles.tinyLogo}
         source={require('../tacoimg4.jpg')}
@@ -179,7 +180,7 @@ const ExtrasScreen = () => {
     <ScrollView>
       <View style={[styles.container, {padding:10}]}>
       <Animatable.View animation="bounceIn">
-        <View style={[styles.displayTabs, {backgroundColor:colors.background}]}>
+        <View style={[styles.displayTabs, {backgroundColor:colors.displayTabs}]}>
         <Image
         style={styles.tinyLogo}
         source={require('../pasta.jpg')}
