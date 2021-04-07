@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
       flexDirection: 'column'
     },
     displayTabs:{
-      borderRadius:7,
+      borderRadius:10,
       padding:20,
       margin:5,
       backgroundColor: '#b8b8b8',
@@ -41,11 +41,12 @@ const styles = StyleSheet.create({
     },
     tinyLogo:{
       height:100,
-      width:150
+      width:150,
+      borderRadius:7
     },
     logoText:{
       justifyContent:'center',
-      paddingTop:20,
+      paddingTop:15,
       paddingHorizontal:20,
       fontSize:30,
       fontWeight: 'bold',
