@@ -2,4 +2,4 @@
 
 ## Landing
 
-<img src="Screenshots/1.jpeg" height="200">
+<img src="Screenshots/1.jpeg" height="400">
